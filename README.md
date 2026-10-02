@@ -1,133 +1,192 @@
-# exp_5_study_and_characterization_of_h_plane_tee
+# exp_3_vi_characteristics_of_gunn_oscillator
 
-# Experiment 5 — Study and Characterization of H-Plane Tee
+# Experiment 3 — V–I Characteristics of Gunn Oscillator
 
 ---
 
 ## Aim
 
-To study and measure the characteristics of an H-plane tee.
+To study the I–V characteristics of a Gunn diode and the depth of modulation of a PIN diode.
 
 ## Apparatus Used
 
-Klystron power supply, klystron mount with tube, isolator, variable attenuator, frequency meter, slotted line section, H-plane tee, detector mount / crystal detector, matched terminations, VSWR meter, waveguide stands.
+Gunn power supply, Gunn oscillator, PIN modulator, isolator, frequency meter, variable attenuator, detector mount, slotted section, VSWR meter.
 
 ## Experimental Setup
 
-<img width="746" height="446" alt="image" src="https://github.com/user-attachments/assets/5cc5ccb7-2004-4a24-8e14-044ebcef6cad" />
+<img width="2170" height="725" alt="image" src="https://github.com/user-attachments/assets/9572ed54-7f9f-413c-b568-c08d9049d680" />
 
 ---
 
 ## Theory
 
-In an H-plane tee an auxiliary waveguide arm is fastened perpendicular to the **narrow wall** of the main guide. It is a three-port device in which the axis of the auxiliary (side) arm is parallel to the planes of the magnetic field of the main guide, and the coupling from the main guide to the branch guide is by means of **magnetic fields** — hence the name H-plane tee.
+The Gunn oscillator is based on the **negative differential conductivity** effect in bulk semiconductors. The Gunn diode has two conduction bands separated by an energy gap larger than thermal agitation energies. When an electron is transferred to the satellite energy band it acquires negative differential mobility, producing the negative resistance required for oscillation.
 
-The perpendicular arm is generally taken as the input and the other two arms are in **shunt** with it, so the junction is also called a **shunt tee**.
+In a Gunn oscillator the diode is placed in a resonant cavity, so the oscillation frequency is set by the cavity dimensions rather than by the diode itself.
 
-Because of the symmetry of the tee, when power enters the auxiliary arm and the two main arms 1 and 2 are terminated in identical loads, the power supplied to each load is **equal and in phase**. Conversely, if two signals of equal amplitude and the same phase are fed into the two main arms, they add together in the side arm. The H-plane tee therefore acts as an **adder**.
+Although a Gunn oscillator can be amplitude-modulated with the bias voltage, a separate **PIN modulator** is used in this experiment: a square-wave modulating signal is applied through the modulator onto the microwave carrier.
 
-### Summary of behaviour
-
-| Feed point | Result |
-|---|---|
-| Auxiliary (H) arm | Equal split into arms 1 and 2, in phase |
-| Arms 1 and 2 (equal, in phase) | Signals add at the H-arm |
-| Function | Adder, shunt tee |
+<img width="542" height="341" alt="image" src="https://github.com/user-attachments/assets/313e43ed-dd69-4b09-9a4f-7a7616faa805" />
 
 ---
 
 ## Procedure
 
-1. Set up the microwave bench: klystron power supply → klystron mount → isolator → variable attenuator → frequency meter → slotted section → component under test (H-plane tee) → detector mount → VSWR meter.
-2. Keep the control knobs of the klystron power supply at their initial settings (mode switch: AM; beam voltage knob: fully anti-clockwise; repeller voltage knob: fully clockwise; meter switch: beam current) and switch on the supply, the VSWR meter and the cooling fan.
-3. Energise the klystron for maximum output at the desired frequency by adjusting the beam and repeller voltages; measure the operating frequency with the frequency meter and then detune it.
-4. **Reference reading:** without the H-plane tee in the line, set the variable attenuator to obtain a convenient full-scale reference reading on the VSWR meter. Note the attenuator setting **A₁** dB.
-5. **Insert the component:** connect the H-plane tee in the line, feeding the arm under test and terminating the remaining arms in matched loads.
-6. Reduce the attenuation until the VSWR meter reads the same reference value. Note the attenuator setting **A₂** dB. The difference (A₁ − A₂) dB gives the coupling/isolation for that pair of ports.
-7. **Power division:** feed the H-arm, terminate one collinear arm in a matched load and measure the power at the other collinear arm; repeat with the arms interchanged. The measured coupling should be about **3 dB** for each collinear arm.
-8. **Isolation:** feed the H-arm and measure the power coupled to the isolated port, with all other ports match-terminated.
-9. **VSWR of each port:** feed the port under test, terminate the remaining ports in matched loads, and measure the VSWR using the slotted line.
-10. Repeat the measurements for each of the three ports.
+1. Set up the components and equipment as shown in the figure above.
+2. Initially set the variable attenuator for maximum attenuation.
+3. Keep the control knobs of the Gunn power supply as follows:
 
----
+   | Control | Setting |
+   |---|---|
+   | Meter switch | OFF |
+   | Gunn bias knob | Fully anti-clockwise |
+   | PIN bias knob / Mod amplifier | Mid position |
+   | PIN mod frequency | Mid position |
+
+4. Keep the control knobs of the VSWR meter as follows:
+
+   | Control | Setting |
+   |---|---|
+   | Meter switch | Normal |
+   | Input switch | Crystal low impedance / 200 K |
+   | Range dB switch | 50 dB |
+   | Gain control knob | Fully clockwise |
+
+5. Set the micrometer of the Gunn oscillator between 5–7 mm for the required frequency of operation.
+6. Switch ON the Gunn power supply, the VSWR meter and the cooling fan.
+7. Keep the mode switch of the Gunn power supply at square wave / internal modulation.
+8. Turn the meter knob to the voltage position and note that as the Gunn bias voltage is varied the current starts decreasing — this indicates the negative resistance characteristic of the Gunn diode. Apply a voltage that puts the device in the middle of the negative resistance region.
+9. Connect the detector output to the SWR meter.
+10. Adjust the square-wave modulation frequency to approximately 1 kHz.
+11. Change the meter range if no deflection is observed.
+12. Keep the slotted-line probe at the position where maximum deflection is observed on the meter.
+13. Adjust the attenuator setting and the gain control knob of the VSWR meter and tune the detector plunger so the pointer indicates VSWR = 1.
+14. Move the detector probe along the slotted line and note the position where the pointer reaches the extreme left — the first minimum. To locate the minimum exactly, note the positions of equal-response points on either side; their midpoint gives the position of the minimum. Note the next minimum position the same way.
+15. Repeat the above procedure for different micrometer settings.
+
+### Depth of Modulation of the PIN Diode
+
+1. Apply the Gunn bias voltage slowly until the panel meter of the Gunn power supply reads 8 V.
+2. Tune the PIN modulator bias voltage and frequency knobs for maximum output on the oscilloscope.
+3. Align the bottom of the square wave on the oscilloscope with a reference level and note the micrometer reading of the variable attenuator.
+4. Now, using the variable attenuator, align the top of the square wave with the same reference level and note the micrometer reading.
+5. Connect the VSWR meter to the detector mount and note the dB reading for both micrometer settings of the variable attenuator.
+6. The difference between the two dB readings gives the modulation depth of the PIN modulator.
+
+> **Note:** After tuning the Gunn source, follow the same procedure for VSWR and impedance measurement as for the depth of modulation of the PIN modulator.
 
 ## Observation
 
-The characteristics of the H-plane tee were studied by measuring the power division, coupling, isolation and VSWR of the three ports.
+### A. V–I Characteristics of Gunn Diode
 
-### Observation Table
+The Gunn diode current was measured for different values of bias voltage.
 
-| S.No. | Measurement | Input Port | Output Port | Coupling / Isolation (dB) |
-|---:|---|---|---|---:|
-| 1 | Power division | H-arm | Arm 1 | 3.1 |
-| 2 | Power division | H-arm | Arm 2 | 3.0 |
-| 3 | Coupling | Arm 1 | H-arm | 3.2 |
-| 4 | Coupling | Arm 2 | H-arm | 3.1 |
-| 5 | Isolation | Arm 1 | Arm 2 | 31.5 |
+| S.No. | Gunn Bias Voltage, V (V) | Gunn Current, I (mA) |
+|---:|---:|---:|
+| 1 | 0.0 | 0 |
+| 2 | 1.0 | 4 |
+| 3 | 2.0 | 9 |
+| 4 | 3.0 | 15 |
+| 5 | 4.0 | 22 |
+| 6 | 5.0 | 28 |
+| 7 | 6.0 | 31 |
+| 8 | 7.0 | 29 |
+| 9 | 8.0 | 26 |
+| 10 | 9.0 | 24 |
+| 11 | 10.0 | 22 |
+| 12 | 11.0 | 23 |
+| 13 | 12.0 | 25 |
 
-### VSWR Observation
+The current initially increases with voltage and then decreases over a certain voltage range. This decreasing-current region represents the **negative differential resistance / negative differential conductivity region** of the Gunn diode.
 
-| S.No. | Port | VSWR |
+### B. Depth of Modulation of PIN Diode
+
+The modulation depth was measured by observing the change in the detected microwave power for the maximum and minimum levels of the modulated waveform.
+
+| S.No. | Condition | Attenuator Reading (dB) |
 |---:|---|---:|
-| 1 | Arm 1 | 1.30 |
-| 2 | Arm 2 | 1.28 |
-| 3 | H-arm | 1.40 |
-
-### Calculation
-
-The coupling is calculated using:
-
-$$
-C = A_1 - A_2
-$$
-
-For Arm 1:
-
-$$
-C_1 = 3.1\text{ dB}
-$$
-
-For Arm 2:
-
-$$
-C_2 = 3.0\text{ dB}
-$$
-
-The average coupling is:
-
-$$
-C_{avg} = \frac{3.1+3.0}{2}
-$$
-
-$$
-\boxed{C_{avg} = 3.05\text{ dB}}
-$$
-
-The measured isolation between the two collinear arms is:
-
-$$
-\boxed{I = 31.5\text{ dB}}
-$$
-
-### Inference
-
-The H-plane tee divides the input power approximately equally between the two collinear arms. The coupling is approximately **3 dB** for each arm, and the signals at the two collinear arms are **equal in amplitude and in phase**.
-
-Hence, the H-plane tee behaves as an **adder (summing junction)**.
-
-> **Note:** The values given above are sample experimental readings. Replace them with your actual laboratory readings if required.
-
+| 1 | Minimum level | 18.0 |
+| 2 | Maximum level | 8.0 |
 
 ---
 
+## Calculation
+
+### 1. Negative Differential Resistance Region
+
+The differential resistance is given by:
+
+$$
+R_d = \frac{\Delta V}{\Delta I}
+$$
+
+Consider two points in the negative-resistance region:
+
+$$
+V_1 = 6.0\text{ V}, \qquad I_1 = 31\text{ mA}
+$$
+
+$$
+V_2 = 10.0\text{ V}, \qquad I_2 = 22\text{ mA}
+$$
+
+Therefore,
+
+$$
+R_d = \frac{V_2-V_1}{I_2-I_1}
+$$
+
+$$
+R_d = \frac{10-6}{22-31}
+$$
+
+$$
+R_d = \frac{4}{-9}
+$$
+
+$$
+\boxed{R_d \approx -0.44\text{ k}\Omega}
+$$
+
+The negative value confirms the negative differential resistance region of the Gunn diode.
+
+### 2. Depth of Modulation of PIN Diode
+
+The modulation depth in dB is calculated from the difference between the two measured power levels:
+
+$$
+M_{dB} = P_{\text{maximum}} - P_{\text{minimum}}
+$$
+
+Using the observed readings:
+
+$$
+M_{dB} = 18.0 - 8.0
+$$
+
+$$
+\boxed{M_{dB} = 10\text{ dB}}
+$$
+
+Thus, the measured depth of modulation of the PIN modulator is approximately **10 dB**.
+
+---
+
+
+
+
 ## Precautions
 
-* Check all connections before switching on the kit.
-* Keep all knobs at minimum before switching on the power supplies; the HT must be OFF while switching on the mains.
-* Do not exceed a beam current of 30 mA, and keep the repeller voltage within the specified range.
-* Terminate all unused ports in matched loads while taking readings.
-* Do not look directly into an open waveguide
+* Check the connections before switching on the kit.
+* Make all connections properly.
+* Take the observations carefully.
 
-## Result
+## Conclusion
 
-The characteristics of the H-plane tee were studied.
+The V–I characteristics of the Gunn diode were studied experimentally. The current initially increased with the applied bias voltage and then decreased over a certain voltage range, confirming the **negative differential resistance characteristic** required for Gunn oscillation.
+
+The depth of modulation of the PIN diode was also measured using the microwave bench setup. For the sample readings, the modulation depth was found to be approximately **10 dB**.
+
+Hence, the **V–I characteristics of the Gunn oscillator and the depth of modulation of the PIN diode were successfully studied**.
+
+
