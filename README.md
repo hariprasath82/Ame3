@@ -53,7 +53,70 @@ Because of the symmetry of the tee, when power enters the auxiliary arm and the 
 
 ## Observation
 
-*(Include your own table relevant to the experiment.)*
+The characteristics of the H-plane tee were studied by measuring the power division, coupling, isolation and VSWR of the three ports.
+
+### Observation Table
+
+| S.No. | Measurement | Input Port | Output Port | Coupling / Isolation (dB) |
+|---:|---|---|---|---:|
+| 1 | Power division | H-arm | Arm 1 | 3.1 |
+| 2 | Power division | H-arm | Arm 2 | 3.0 |
+| 3 | Coupling | Arm 1 | H-arm | 3.2 |
+| 4 | Coupling | Arm 2 | H-arm | 3.1 |
+| 5 | Isolation | Arm 1 | Arm 2 | 31.5 |
+
+### VSWR Observation
+
+| S.No. | Port | VSWR |
+|---:|---|---:|
+| 1 | Arm 1 | 1.30 |
+| 2 | Arm 2 | 1.28 |
+| 3 | H-arm | 1.40 |
+
+### Calculation
+
+The coupling is calculated using:
+
+$$
+C = A_1 - A_2
+$$
+
+For Arm 1:
+
+$$
+C_1 = 3.1\text{ dB}
+$$
+
+For Arm 2:
+
+$$
+C_2 = 3.0\text{ dB}
+$$
+
+The average coupling is:
+
+$$
+C_{avg} = \frac{3.1+3.0}{2}
+$$
+
+$$
+\boxed{C_{avg} = 3.05\text{ dB}}
+$$
+
+The measured isolation between the two collinear arms is:
+
+$$
+\boxed{I = 31.5\text{ dB}}
+$$
+
+### Inference
+
+The H-plane tee divides the input power approximately equally between the two collinear arms. The coupling is approximately **3 dB** for each arm, and the signals at the two collinear arms are **equal in amplitude and in phase**.
+
+Hence, the H-plane tee behaves as an **adder (summing junction)**.
+
+> **Note:** The values given above are sample experimental readings. Replace them with your actual laboratory readings if required.
+
 
 ---
 
